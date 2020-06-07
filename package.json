@@ -1,0 +1,15 @@
+{
+  "name": "price-offer",
+  "version": "1.0.0",
+  "description": "Simple slider with company pricing plans offer",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/website/ --recursive"
+  },
+  "author": "Grzegorz Pabis",
+  "license": "ISC"
+}
