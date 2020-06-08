@@ -103,3 +103,11 @@ ul {
       background: skyblue; }
   .dotted-menu .active {
     background: steelblue; }
+
+@media only screen and (max-width: 800px) {
+  .slider .slide-side {
+    display: none; }
+  .slider .slide .offer-name {
+    font-size: 0.9em; }
+  .slider .slide .offer-features {
+    font-size: 0.9em; } }

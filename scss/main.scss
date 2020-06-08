@@ -137,3 +137,22 @@ ul {
     background: $primary-color;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .slider {
+    .slide {
+      &-side {
+        display: none;
+      }
+
+      .offer {
+        &-name {
+          font-size: 0.9em;
+        }
+        &-features {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
