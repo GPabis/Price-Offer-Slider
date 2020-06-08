@@ -88,3 +88,18 @@ ul {
     .slider .slide .offer-select .btn:hover {
       opacity: 0.9;
       cursor: pointer; }
+
+.dotted-menu {
+  text-align: center; }
+  .dotted-menu .dot {
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    margin: 1em 0.3em;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block; }
+    .dotted-menu .dot:hover {
+      background: skyblue; }
+  .dotted-menu .active {
+    background: steelblue; }

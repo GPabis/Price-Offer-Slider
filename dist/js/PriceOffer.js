@@ -4,7 +4,7 @@ class PriceOffer {
       throw new TypeError("Cannot construct PriceOffer instances directly");
     }
     this.name;
-    this.discription;
+    this.description;
     this.price;
     this.features = new PriceOfferFeatures();
     this.accesToFeatures;
@@ -15,7 +15,7 @@ class PriceOffer {
   }
 
   _getDicsription() {
-    return this.discription;
+    return this.description;
   }
 
   _getFeatures() {
@@ -35,25 +35,23 @@ class PriceOffer {
   }
 
   _createNameSection() {
-    const nameSection = `
+    return `
       <div class="offer-name">
         <h1>${this._getName()}</h1>
         <p>${this._getDicsription()}</p>
       </div>
     `;
-    return nameSection;
   }
 
   _createPriceSection() {
-    const priceSection = `
+    return `
       <div class="offer-price">
         <strong>PLN ${this._getPrice()}</strong><sub>/mo</sub>
       </div>
     `;
-    return priceSection;
   }
 
-  _assignAccesIcon(indexOfFeat) {
+  _assignAccessIcon(indexOfFeat) {
     let icon = this.features.getSingleFeature(indexOfFeat).isAcces
       ? '<i class="fas fa-check"></i>'
       : '<i class="fas fa-times"></i>';
@@ -66,8 +64,8 @@ class PriceOffer {
     for (const val of this.features.getFeatures()) {
       featuresList += `
         <li>
-          ${this._assignAccesIcon(this.features.getFeatures().indexOf(val))}
-          <p>${val.discription}</p>
+          ${this._assignAccessIcon(this.features.getFeatures().indexOf(val))}
+          <p>${val.description}</p>
         </li>
         `;
     }
@@ -75,27 +73,25 @@ class PriceOffer {
   }
 
   _createFeaturesSection() {
-    const featuresSection = `
+    return `
       <div class="offer-features">
         <ul>
           ${this._createFeaturesList()}
         </ul>
       </div>
     `;
-    return featuresSection;
   }
 
   _createSelectSection() {
-    const selectSection = `
+    return `
       <div class="offer-select">
         <button class="btn">Select</button>
       </div>
     `;
-    return selectSection;
   }
 
   createSlideTemplate(slide) {
-    const slideTemplate = `
+    return `
     <div class="slide ${slide}">
       ${this._createNameSection()}
       ${this._createPriceSection()}
@@ -103,6 +99,5 @@ class PriceOffer {
       ${this._createSelectSection()}
     </div>
     `;
-    return slideTemplate;
   }
 }

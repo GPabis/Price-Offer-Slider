@@ -3,7 +3,7 @@ class BasicPriceOffer extends PriceOffer {
     super();
     this.name = "Basic";
     this.accesToFeatures = [true, true, true, false, false, false];
-    this.price = 100;
-    this.discription = "Package for users with low expectations.";
+    this.price = 99.99;
+    this.description = "Package for users with low expectations.";
   }
 }

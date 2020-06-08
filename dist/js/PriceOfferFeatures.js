@@ -2,27 +2,27 @@ class PriceOfferFeatures {
   constructor() {
     this.features = [
       {
-        discription: "Unlimited Acces to ALL libraries",
+        description: "Unlimited Acces to ALL libraries",
         isAcces: false,
       },
       {
-        discription: "Unlimited amount of project to create",
+        description: "Unlimited amount of project to create",
         isAcces: false,
       },
       {
-        discription: "Access to custom libraries from Github",
+        description: "Access to custom libraries from Github",
         isAcces: false,
       },
       {
-        discription: "Database tools, SQL",
+        description: "Database tools, SQL",
         isAcces: false,
       },
       {
-        discription: "Offline access to all features of our product",
+        description: "Offline access to all features of our product",
         isAcces: false,
       },
       {
-        discription: "The ability to create group projects up to 50 members",
+        description: "The ability to create group projects up to 50 members",
         isAcces: false,
       },
     ];
@@ -36,7 +36,7 @@ class PriceOfferFeatures {
     return this.features[index];
   }
 
-  _changeAcces(feat, isAcces) {
+  _changeAccess(feat, isAcces) {
     feat.isAcces = isAcces;
   }
 
@@ -49,7 +49,7 @@ class PriceOfferFeatures {
   assignAcces(accesToFeatures) {
     this._isAccesToFeaturesEmpty(accesToFeatures);
     for (const val of this.features) {
-      this._changeAcces(val, accesToFeatures[this.features.indexOf(val)]);
+      this._changeAccess(val, accesToFeatures[this.features.indexOf(val)]);
     }
   }
 }
